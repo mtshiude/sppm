@@ -1,5 +1,5 @@
 # Stock price predict system
-Easy lstm model and finance data processing
+Easy lstm model and finance data preprocessing
 
 # Feature
 
