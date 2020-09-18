@@ -1,6 +1,9 @@
 # Stock price predict system
 Easy lstm model and finance data preprocessing
 
+過去一週間分のデータを元に翌日の株価が上がるか予想する。
+※このコード実運用しているシステムの一部を抜粋し簡易化したものです。
+
 # Feature
 
 ![proj_image1](https://user-images.githubusercontent.com/71445023/93541461-7a8f3080-f991-11ea-95da-0b4359411343.jpg)
