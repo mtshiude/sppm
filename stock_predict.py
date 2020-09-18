@@ -9,7 +9,7 @@ import numpy as np
 class stock_predict(object):
     def __init__(self):
         self.dir = 'stock_data/'
-        stock_code = '7203_2019'#2019year toyota motor stock data
+        stock_code = '7203_2019'#toyota motor stock data on 2019
         term = 5
         
         
