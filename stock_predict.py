@@ -9,11 +9,12 @@ import numpy as np
 class stock_predict(object):
     def __init__(self):
         self.dir = 'stock_data/'
+        stock_code = '7203_2019'#2019year toyota motor stock data
         term = 5
         
         
         #load data and preprocessing
-        data = self.data_load('7203_2019')
+        data = self.data_load(stock_code)
         master = self.data_preprocessing(data)
         print(master)
         
@@ -31,7 +32,6 @@ class stock_predict(object):
         
         x_train_data.to_csv('x_train_data.csv')
         x_test_data.to_csv('x_test_data.csv')
-        #input()
         #convert to 5term sequencial data
         seq_x_train = self.data_to_sequence(x_train_data,term)
         seq_x_test  = self.data_to_sequence(x_test_data,term)
@@ -41,8 +41,8 @@ class stock_predict(object):
         #make model
         model = self.make_models(seq_x_train.shape[1:])
         #train model
-        history = model.fit(seq_x_train,seq_y_train,epochs=100,
-                            batch_size=40,validation_split=0.2)
+        history = model.fit(seq_x_train,seq_y_train,epochs=50,
+                            batch_size=20,validation_split=0.2)
         self.plotter(history)
 
     def plotter(self,history):
